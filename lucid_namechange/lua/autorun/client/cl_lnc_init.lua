@@ -1,11 +1,6 @@
 --Lucid Name Change
 --Made by OverlordAkise
 
-hook.Add("InitPostEntity", "luctus_namechange_fix", function()
-    net.Start("luctus_namechange")
-    net.SendToServer()
-end)
-
 net.Receive("luctus_namecheck", function()
     RunConsoleCommand("say", "/rpname " .. net.ReadString())
     NameFrame:Close()
